@@ -1,16 +1,22 @@
 package app1.apps.nicolas.formbs2018;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+
+import java.util.Calendar;
 
 public class Formulario extends AppCompatActivity implements DialogoRegistroExitoso.finalizoCuadroDialgo{
 
     Context context;
+
+    private int dia,mes,ano;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +33,7 @@ public class Formulario extends AppCompatActivity implements DialogoRegistroExit
         EditText ciudad = (EditText) findViewById(R.id.editTextCiudad);
         EditText direccion = (EditText) findViewById(R.id.editTextDireccion);
         EditText email = (EditText) findViewById(R.id.editTextCorreo);
+        final EditText fechaNacimient = (EditText) findViewById(R.id.editNacimiento);
         Button btnAgregarregistro = (Button) findViewById(R.id.btnAgregarRegistro_);
 
 
@@ -38,6 +45,26 @@ public class Formulario extends AppCompatActivity implements DialogoRegistroExit
                 new DialogoRegistroExitoso(context, Formulario.this);
             }
         });
+
+
+        fechaNacimient.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Calendar c  = Calendar.getInstance();
+                dia = c.get(Calendar.DAY_OF_MONTH);
+                mes = c.get(Calendar.MONTH);
+                ano = c.get(Calendar.YEAR);
+
+                DatePickerDialog datePickerDialog = new DatePickerDialog(context, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        fechaNacimient.setText(dayOfMonth+"/"+month+"/"+year);
+                    }
+                },dia,mes,ano);
+
+            }
+        });
+
     }
 
     @Override

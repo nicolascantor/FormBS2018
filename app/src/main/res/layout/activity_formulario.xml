@@ -98,6 +98,17 @@
             android:inputType="textPostalAddress" />
 
         <EditText
+            android:id="@+id/editNacimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/editTextDireccion"
+            android:layout_marginEnd="237dp"
+            android:ems="10"
+            android:inputType="date"
+            android:hint="Fecha de nacimiento" />
+
+        <EditText
             android:id="@+id/editTextCorreo"
             android:layout_width="456dp"
             android:layout_height="wrap_content"
@@ -120,17 +131,6 @@
             android:text="Guardar Registro"
             android:textColor="@android:color/white"
             android:textSize="24sp" />
-
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginBottom="137dp"
-            android:layout_marginEnd="137dp"
-            android:ems="10"
-            android:inputType="date" />
 
     </RelativeLayout>
 

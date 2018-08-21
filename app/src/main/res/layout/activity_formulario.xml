@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="16dp">
 
         <TextView
             android:id="@+id/textView"
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/editTextNombre"
-            android:layout_marginTop="156dp"
+            android:layout_marginTop="189dp"
             android:ems="10"
             android:hint="Cedula"
             android:inputType="number" />
@@ -69,8 +69,9 @@
             android:id="@+id/editTextTelefono"
             android:layout_width="455dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_alignStart="@+id/editTextNombre"
-            android:layout_alignTop="@+id/editTextCiudad"
+            android:layout_marginBottom="221dp"
             android:ems="10"
             android:hint="Telefono"
             android:inputType="textPersonName|phone" />
@@ -79,9 +80,8 @@
             android:id="@+id/editTextCiudad"
             android:layout_width="449dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/editTextapellido"
-            android:layout_marginBottom="199dp"
+            android:layout_alignEnd="@+id/editTextapellido"
+            android:layout_alignTop="@+id/editTextTelefono"
             android:ems="10"
             android:hint="Ciudad"
             android:inputType="textAutoComplete" />
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignStart="@+id/editTextNombre"
-            android:layout_marginBottom="126dp"
+            android:layout_marginBottom="150dp"
             android:ems="10"
             android:hint="Dirección"
             android:inputType="textPostalAddress" />
@@ -103,12 +103,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/editTextDireccion"
-            android:layout_marginEnd="237dp"
-            android:ems="10"
+            android:layout_marginEnd="136dp"
             android:clickable="true"
+            android:ems="10"
             android:focusable="false"
-            android:inputType="date"
-            android:hint="Fecha de nacimiento" />
+            android:hint="Fecha de nacimiento"
+            android:inputType="date" />
 
         <EditText
             android:id="@+id/editTextCorreo"

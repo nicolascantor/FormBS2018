@@ -7,8 +7,8 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="659dp"
-        android:layout_height="309dp"
+        android:layout_width="657dp"
+        android:layout_height="319dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -16,6 +16,7 @@
         android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -25,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="15dp"
             android:text="FELICITACIONES!!!!"
             android:textColor="@android:color/white"
             android:textSize="30sp" />
@@ -34,9 +35,8 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_above="@+id/textTituloCodigoPromo"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="68dp"
             android:text="Registro exitoso"
             android:textColor="@android:color/white"
             android:textSize="24sp" />
@@ -45,9 +45,7 @@
             android:id="@+id/textTituloCodigoPromo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="125dp"
+            android:layout_centerInParent="true"
             android:text="con el siguiente codigo podras reclamar tu premio:"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
@@ -73,6 +71,16 @@
             android:background="@android:color/holo_blue_bright"
             android:text="Finalzar"
             android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textNombreClienteDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_centerHorizontal="true"
+            android:text="Camila"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

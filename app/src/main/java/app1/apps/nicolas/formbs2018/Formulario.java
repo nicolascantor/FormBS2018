@@ -15,8 +15,8 @@ import java.util.Calendar;
 public class Formulario extends AppCompatActivity implements DialogoRegistroExitoso.finalizoCuadroDialgo{
 
     Context context;
-
     private int dia,mes,ano;
+    public EditText nombre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class Formulario extends AppCompatActivity implements DialogoRegistroExit
 
         context = this;
 
-        EditText nombre = (EditText) findViewById(R.id.editTextNombre);
+        nombre = (EditText) findViewById(R.id.editTextNombre);
         EditText apellido = (EditText) findViewById(R.id.editTextapellido);
         EditText cedula = (EditText) findViewById(R.id.editTextCedula);
         EditText Celular = (EditText) findViewById(R.id.editTextCelular);
@@ -42,7 +42,7 @@ public class Formulario extends AppCompatActivity implements DialogoRegistroExit
             @Override
             public void onClick(View v) {
 
-                new DialogoRegistroExitoso(context, Formulario.this);
+                new DialogoRegistroExitoso(context, Formulario.this, nombre.getText().toString());
             }
         });
 
@@ -61,9 +61,10 @@ public class Formulario extends AppCompatActivity implements DialogoRegistroExit
                         fechaNacimient.setText(dayOfMonth+"/"+month+"/"+year);
                     }
                 },dia,mes,ano);
-
+                datePickerDialog.show();
             }
         });
+
 
     }
 

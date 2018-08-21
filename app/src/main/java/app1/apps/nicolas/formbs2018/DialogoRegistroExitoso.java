@@ -9,8 +9,10 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class DialogoRegistroExitoso {
+
 
    public interface finalizoCuadroDialgo{
         void resultadoCuadroDialogo(String codido);
@@ -18,7 +20,7 @@ public class DialogoRegistroExitoso {
 
     private finalizoCuadroDialgo interfaz;
 
-    public DialogoRegistroExitoso(Context contexto, finalizoCuadroDialgo actividad){
+    public DialogoRegistroExitoso(Context contexto, finalizoCuadroDialgo actividad, String nombre){
 
         interfaz = actividad;
 
@@ -28,8 +30,12 @@ public class DialogoRegistroExitoso {
         dialogoNuevoValor.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialogoNuevoValor.setContentView(R.layout.dialogo_registro_exitoso);
 
+
+        TextView nombreDialog = (TextView) dialogoNuevoValor.findViewById(R.id.textNombreClienteDialog);
         Button btnFinRegistro = (Button) dialogoNuevoValor.findViewById(R.id.btnFinalizarRegistro);
 
+
+        nombreDialog.setText(nombre.toUpperCase());
 
 
         btnFinRegistro.setOnClickListener(new View.OnClickListener() {
